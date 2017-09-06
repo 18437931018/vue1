@@ -1,0 +1,13 @@
+{  
+    "status":1,
+    "result":[
+
+{ "message": "酒鬼花生", "imgurl":"img/photo1.jpg", "number": 1, "price": 19 },
+
+{ "message": "小清新", "imgurl":"img/photo2.jpg", "number": 1, "price": 29},
+
+{ "message": "三只", "imgurl":"img/photo3.jpg", "number": 1, "price": 9 }
+
+]
+    
+}

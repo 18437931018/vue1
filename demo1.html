@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	ul{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+      img{
+      	width: 100px;
+      	height: 100px;
+      }
+      .div2{
+      	height: 100px;
+      	
+      	text-align: center;
+      	line-height: 100px;
+      	float: right;
+      	margin-right: 50px;
+      }
+      .active{
+      	background: red;
+      }
+
+	</style>
+</head>
+<body>
+
+ <div id="div1">
+ 	<ul>
+ 	     
+
+ 		<li  v-for="(item, index) in list">
+
+
+ 		<div style="width: 30px;height:30px;border-radius: 50px;display: inline-block;margin-bottom: 30px;margin-right: 50px;border: 2px solid;" v-bind:class="{active:item.isActive1}" @click="check(item)"></div>
+ 		<img v-bind:src="item.imgurl"> &nbsp;{{item.message}}
+
+ 		<div class="div2"><a href="#">删除</a>
+ 		</div>
+ 		<div class="div2">￥{{item.price*item.number}}</div>
+
+ 		<div class="div2">
+ 		<a href="#" v-on:click="jianNumber(item)">-</a>
+
+ 		<input type="number" style="width: 60px;" v-model="item.number"></input>
+ 		<a href="#" v-on:click="addNumber(item)">+</a>
+ 		</div>
+
+ 		<div class="div2">￥{{item.price}}</div>
+
+ 		
+
+ 		</li>
+ 	</ul>
+ 	<div >
+ 		<div style="width: 30px;height:30px;border-radius: 50px;border: 2px solid;display: inline-block;margin-left: 40px;" v-bind:class="{ active: isActive2 }" @click="checkAll(true)"></div>
+ 		<a href="#" v-on:click="checkAll(true)">全选</a>&nbsp;<a href="#" v-on:click="checkAll(false)">取消全选</a>
+ 		<div style="float: right;margin-right: 100px">总价：￥{{totalmoney}}</div>
+ 	</div>
+ 	<br />
+ 	<input type="text" v-model="message"></input>
+ </div>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/demo1.js"></script>
+
+</body>
+</html>
